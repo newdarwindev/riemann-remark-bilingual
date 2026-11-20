@@ -37,6 +37,16 @@ def write_implications(root: Path, out: Path, common_css: str):
         diagram = (f'<ol class="flow"><li><strong>{claim}</strong></li><li>{check}</li>'
                    f'<li><strong>{pass_label}</strong><ul><li>{rh}</li><li>{grh}</li>'
                    f'<li>{outside}</li></ul></li></ol>')
+        mermaid = ["flowchart TD"]
+        for node, label in zip("ABCDEF", page["diagram"], strict=True):
+            if any(c in label for c in ('"', '\n', '\r')):
+                raise ValueError("Unexpected Mermaid label punctuation")
+            mermaid.append(f'    {node}["{label}"]')
+        mermaid += ["    A --> B --> C", "    C --> D", "    C --> E", "    C -.-> F"]
+        (out / f"scope-{lang}.mmd").write_text("\n".join(mermaid) + "\n", encoding="utf-8")
+        diagram += (f'<p><a href="scope-{lang}.mmd" download>'
+                    + ("Исходник схемы Mermaid" if lang == "ru" else "Mermaid diagram source")
+                    + "</a></p>")
         title = escape(page["title"])
         html = f'''<!doctype html><html lang="{lang}"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1"><title>{title}</title>
