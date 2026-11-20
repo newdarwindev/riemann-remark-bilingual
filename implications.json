@@ -71,7 +71,7 @@
           [
             "Wider GRH applications",
             "Results conditional only on the exact Dirichlet GRH proved would lose that assumption; other hypotheses would remain.",
-            "A result conditional on Dedekind zeta functions over general number fields needs another argument. In particular, a bound for residues of Dedekind zeta functions cannot be declared unconditional on this basis.",
+            "General Dedekind-zeta GRH is stronger. For example, the effective Chebotarev bound by Grenié and Molteni assumes GRH for the Dedekind zeta function of the extension field; it does not become unconditional from Dirichlet GRH alone.",
             [
               [
                 "Original Remark",
@@ -159,6 +159,14 @@
           ]
         ]
       ]
+    ],
+    "diagram": [
+      "Reported claim",
+      "Match theorem statements; audit axioms; replay in Lean",
+      "If all checks pass",
+      "RH: zeta zeros",
+      "Dirichlet GRH: Dirichlet L-functions",
+      "Stronger versions: not established"
     ]
   },
   "ru": {
@@ -233,7 +241,7 @@
           [
             "Приложения более общей GRH",
             "Результаты, использующие в точности доказанный вариант GRH для функций Дирихле, перестанут зависеть от этого предположения. Другие условия сохранятся.",
-            "Результат о дзета-функциях Дедекинда общих числовых полей требует отдельного обоснования. Например, соответствующую оценку вычетов нельзя на этом основании объявлять безусловной.",
+            "GRH для общих дзета-функций Дедекинда сильнее. Например, эффективная оценка Чеботарёва у Гренье и Мольтени предполагает GRH для дзета-функции поля расширения и не становится безусловной лишь из GRH Дирихле.",
             [
               [
                 "Оригинал Remark",
@@ -321,6 +329,14 @@
           ]
         ]
       ]
+    ],
+    "diagram": [
+      "Заявление автора",
+      "Сверить формулировки, проверить аксиомы, повторить проверку в Lean",
+      "Если все проверки пройдены",
+      "RH: нули дзета-функции",
+      "GRH Дирихле: L-функции Дирихле",
+      "Более общие версии: не установлены"
     ]
   }
 }
