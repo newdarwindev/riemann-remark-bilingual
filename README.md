@@ -11,3 +11,7 @@ Run `python3 build.py` to generate the offline bilingual HTML companion. Open `d
 ## Toy Lean examples
 
 See [verification notes](VERIFICATION.md#toy-lean-corpus) for the deterministic examples inspired by six topics on the timeline. They are not claims from the original manuscript or evidence for RH/GRH.
+
+## Static progress companion
+
+Run `python3 build.py --out docs` to regenerate the GitHub Pages files. The dashboard counts the six generated toy chapters, not the original proof. Expand each chapter using the keyboard or pointer. Design inspiration: [Bruno Loff’s RH Lean check](https://brunoloff.github.io/assets/rh-progress.html).

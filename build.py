@@ -4,6 +4,7 @@ import json
 from html import escape
 from pathlib import Path
 import argparse
+from progress import dashboard
 
 ROOT = Path(__file__).resolve().parent
 SOURCE = "https://alpo.ge/remark.pdf"
@@ -36,7 +37,7 @@ def page(lang, data):
 <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{g('title')}</title><meta name="description" content="{g('description')}">
 <style>{CSS}</style></head>
-<body><main><nav><a href="index.html">Русский / English</a> · {links}</nav>
+<body><main><nav><a href="index.html#toy-progress">Dashboard / Прогресс</a> · {links}</nav>
 <header><h1>{g('title')}</h1><p>{g('description')}</p><p class="status">{g('status')}</p></header>
 {sections}
 <footer><p><a href="{SOURCE}">{g('sourceLabel')}</a></p>
@@ -71,7 +72,7 @@ def parallel(data):
 <p>Independent reading companion to Levent Alpöge’s “Remark” (November 20, 2026). Original summaries and invented teaching examples, not a translation or proof.</p>
 <p lang="ru">Самостоятельный обзор заметки Левента Алпёге от 20 ноября 2026 года. Краткое изложение и учебные примеры, не полный перевод и не доказательство.</p>
 <p class="status">Claim not verified here · <span lang="ru">Утверждение здесь не проверено</span></p>
-</header>{lines}
+</header>{dashboard(ROOT)}{lines}
 <footer><a href="{SOURCE}">Original PDF / <span lang="ru">Оригинал PDF</span></a> ·
 <a href="{VERIFY}">Independent verification / <span lang="ru">Независимая проверка</span></a></footer>
 </main></body></html>"""
