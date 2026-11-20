@@ -1,0 +1,44 @@
+{
+  "en": {
+    "title": "A claimed proof of the Riemann Hypothesis",
+    "description": "A short guide to the note “Remark” and what would be needed to verify its claim.",
+    "status": "Unverified mathematical claim",
+    "sourceLabel": "Read the original PDF",
+    "verificationLabel": "See independent verification work",
+    "sections": [
+      [
+        "What the note claims",
+        "The note reports a Claude-assisted proof of the Riemann Hypothesis and of the generalized hypothesis for Dirichlet L-functions. It treats the extended hypothesis as a possibility, not as an established consequence."
+      ],
+      [
+        "What was released",
+        "The opening page points to a Lean formalization distributed as a 14-part archive separate from the PDF. The next page explains the choice to release the formal code rather than an informal proof. The final pages give a timeline and mention theta lifts, periods and integral estimates."
+      ],
+      [
+        "What still needs checking",
+        "A successful build is only one step. An independent check must confirm that the theorem statements match the intended conjectures and inspect their assumptions and dependencies. The linked verification project reports preliminary checks; this summary does not establish that the full proof has been verified."
+      ]
+    ]
+  },
+  "ru": {
+    "title": "Заявление о доказательстве гипотезы Римана",
+    "description": "Краткий обзор заметки «Remark» и шагов, необходимых для проверки её утверждения.",
+    "status": "Математическое утверждение не подтверждено",
+    "sourceLabel": "Открыть оригинал PDF",
+    "verificationLabel": "Посмотреть ход независимой проверки",
+    "sections": [
+      [
+        "Что утверждается в заметке",
+        "В заметке говорится, что с помощью Claude получено доказательство гипотезы Римана и её обобщения для L-функций Дирихле. Расширенная гипотеза упоминается как возможное, а не доказанное следствие."
+      ],
+      [
+        "Что опубликовано",
+        "На первой странице дана ссылка на формализацию на языке Lean. Она вынесена в отдельный архив из 14 частей и не встроена в PDF. На второй странице объясняется, почему опубликован формальный код, а не обычное изложение доказательства. В конце приведена хронология работы и упомянуты тета-подъёмы, периоды и оценки интегралов."
+      ],
+      [
+        "Что ещё нужно проверить",
+        "Успешная сборка кода — только первый шаг. Нужно независимо проверить, что формулировки теорем совпадают с исходными гипотезами, и выяснить, на каких предпосылках и зависимостях опирается вывод. Проект по ссылке сообщает о предварительных проверках; этот обзор не подтверждает доказательство целиком."
+      ]
+    ]
+  }
+}
