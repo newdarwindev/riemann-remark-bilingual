@@ -84,6 +84,10 @@
               [
                 "Comparator: formal statements",
                 "https://github.com/SINF-KEN/rh-lean-check#the-statements"
+              ],
+              [
+                "Exact formal target",
+                "https://github.com/SINF-KEN/rh-lean-check/blob/main/src/Challenge.lean"
               ]
             ]
           ]
@@ -114,7 +118,7 @@
           [
             "RSA, elliptic curves and TLS",
             "Mathematical assumptions used in particular number-theoretic proofs may be discharged if they actually match.",
-            "No new efficient factoring or discrete-log algorithm follows from the statement alone. TLS authentication and key establishment are separate. Shor’s quantum algorithms have an independent premise.",
+            "No new efficient RSA modulus factoring algorithm or finite-field/elliptic-curve discrete-log algorithm follows. TLS authentication and key establishment are separate. Shor’s quantum algorithms have an independent premise.",
             [
               [
                 "NIST signatures",
@@ -133,7 +137,7 @@
           [
             "AES, SHA and post-quantum standards",
             "The reported theorem supplies no direct new analysis of these constructions.",
-            "No reason follows to change AES/SHA parameters or standards-based post-quantum migration. Their relevant security problems are not Dirichlet GRH.",
+            "Nothing here changes AES/SHA parameters or post-quantum migration. ML-KEM relies on Module-LWE; ML-DSA uses module-lattice assumptions; SLH-DSA is hash-based. These and the quantum threat model are independent of this RH claim.",
             [
               [
                 "AES",
@@ -254,6 +258,10 @@
               [
                 "Comparator: формальные утверждения",
                 "https://github.com/SINF-KEN/rh-lean-check#the-statements"
+              ],
+              [
+                "Точные формальные цели",
+                "https://github.com/SINF-KEN/rh-lean-check/blob/main/src/Challenge.lean"
               ]
             ]
           ]
@@ -284,7 +292,7 @@
           [
             "RSA, эллиптические кривые и TLS",
             "В отдельных теоретических результатах может отпасть условие, если оно совпадает с доказанным утверждением.",
-            "Из самой теоремы не следует быстрый алгоритм факторизации или дискретного логарифмирования. В TLS аутентификация и согласование ключей разделены. Алгоритмы Шора опираются на отдельную предпосылку о квантовых вычислениях.",
+            "Не следует ни быстрый алгоритм разложения модуля RSA, ни быстрый алгоритм дискретного логарифмирования в конечных полях или на эллиптических кривых. В TLS аутентификация и согласование ключей разделены. Алгоритмы Шора опираются на отдельную предпосылку о квантовых вычислениях.",
             [
               [
                 "Стандарт подписей NIST",
@@ -303,7 +311,7 @@
           [
             "AES, SHA и постквантовые стандарты",
             "Заявленная теорема не даёт нового прямого анализа этих конструкций.",
-            "Нет основания менять параметры AES/SHA или рекомендации по переходу на постквантовые стандарты. Их стойкость не сводится к GRH для функций Дирихле.",
+            "Нет основания менять параметры AES/SHA или рекомендации по переходу на постквантовые стандарты. ML-KEM опирается на Module-LWE, ML-DSA — на предположения о модульных решётках, SLH-DSA — на хеширование. Эти основания и квантовая модель угроз не зависят от заявления о RH.",
             [
               [
                 "AES",
