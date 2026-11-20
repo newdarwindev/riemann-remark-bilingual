@@ -5,6 +5,7 @@ from html import escape
 from pathlib import Path
 import argparse
 from progress import dashboard
+from implications import write_implications
 
 ROOT = Path(__file__).resolve().parent
 SOURCE = "https://alpo.ge/remark.pdf"
@@ -37,7 +38,7 @@ def page(lang, data):
 <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{g('title')}</title><meta name="description" content="{g('description')}">
 <style>{CSS}</style></head>
-<body><main><nav><a href="index.html#toy-progress">Dashboard / Прогресс</a> · {links}</nav>
+<body><main><nav><a href="index.html#toy-progress">Dashboard / Прогресс</a> · {links} · <a href="implications-{lang}.html">{'Последствия' if lang == 'ru' else 'Implications'}</a></nav>
 <header><h1>{g('title')}</h1><p>{g('description')}</p><p class="status">{g('status')}</p></header>
 {sections}
 <footer><p><a href="{SOURCE}">{g('sourceLabel')}</a></p>
@@ -67,7 +68,7 @@ def parallel(data):
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Remark on RH Proof Grounded Hallucinated Proof Annotation Paper</title><style>{CSS}{extra}</style></head>
 <body><main><header>
-<nav><a href="ru.html" lang="ru">Только русский</a> · <a href="en.html">English only</a></nav>
+<nav><a href="ru.html" lang="ru">Только русский</a> · <a href="en.html">English only</a> · <a href="implications-en.html">Implications</a> / <a href="implications-ru.html" lang="ru">Последствия</a></nav>
 <h1>Remark on RH Proof Grounded Hallucinated Proof Annotation Paper</h1>
 <p>Independent reading companion to Levent Alpöge’s “Remark” (November 20, 2026). Original summaries and invented teaching examples, not a translation or proof.</p>
 <p lang="ru">Самостоятельный обзор заметки Левента Алпёге от 20 ноября 2026 года. Краткое изложение и учебные примеры, не полный перевод и не доказательство.</p>
@@ -87,3 +88,4 @@ if __name__ == "__main__":
         (args.out / filename).write_text(page(lang, data[lang]), encoding="utf-8")
 
     (args.out / "index.html").write_text(parallel(data), encoding="utf-8")
+    write_implications(ROOT, args.out, CSS)
